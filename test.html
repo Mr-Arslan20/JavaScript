@@ -1,0 +1,125 @@
+<!-- // const myarray=[1,2,3,4,5];
+// // console.log(myarray[0]);
+
+
+
+// myarray.push(6)
+// // console.log(myarray);
+
+// //slice
+// console.log("A", myarray);
+// const myn1 =myarray.slice(1,3);
+// console.log(myn1);
+
+// //splice
+// console.log("B", myarray);
+// const myn2 =myarray.splice(1,3);
+// console.log(myn2);
+
+
+// const marvel =[ "thor" , "iron-man" ,"spiderman"]
+// const DC = ["batman", " flash" , " batman"]
+
+///==>> objects
+
+//Object.create() //singleton object through constructor.
+
+// const mysymbl=Symbol("key1");
+// const jsuser={
+//     name : "Arslan",
+//     "full name":"Malick Arslan",
+//     age : 25,
+//     [mysymbl]:"this is a symbol", //symbol is used to hide the key
+//     location: "Karachi",
+//     email:"abc#gmail.com"  ,
+//     isloggedin:true,
+//     lastloggedindays:["monday","tuesday","wednesday"]
+
+// }
+// console.log(jsuser.email);
+// console.log(jsuser["email"]);
+// console.log(jsuser["full name"]);
+// console.log(jsuser[mysymbl]);//to print a symbol square brackets are use
+
+
+// console.log((jsuser.isloggedin));
+
+// jsuser.greeting=function(){
+//     console.log("hello user");
+// }
+// jsuser.greetingtwo=function(){
+//     console.log(`hello, users ${this.name} `);
+// }
+
+// console.log(jsuser.greetingtwo());
+// console.log(jsuser.greeting());
+
+
+//==>singleton object
+const tinder={}
+tinder.id="123abc";
+tinder.name="Arslan";
+tinder.isloggedin=false;
+
+// console.log(tinder);
+
+// const regularuser={
+//     email:"malik@gmail.com",
+//     fullname: {
+//                  userfullname:{
+//                      firstname: " mr",
+//                   lastname: " arslan"
+//                 }
+//             }
+// }
+// console.log(regularuser.fullname.userfullname.firstname); -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Handling</title>
+</head>
+<body>
+
+    <form action="" method="get" id="information">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" required><br>
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lname" required><br>
+
+        <label for="adress">Address</label>
+        <input type="text" id="adress" name="adress" required><br>
+
+        <!-- Move the button inside the form -->
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="outputarea">
+        <p>You submitted the following information:</p>
+        <p id="output"></p>
+    </div>
+
+    <script>
+        // Get form and output area
+        const form = document.getElementById('information');
+        const output = document.getElementById('output');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent default form submission
+
+            // Get values **inside** the event listener
+            const first = document.getElementById('fname').value;
+            const second = document.getElementById('lname').value;
+            const social = document.getElementById('adress').value;
+
+            // Corrected string formatting
+            output.innerHTML = `First Name: ${first} <br> Last Name: ${second} <br> Address: ${social}`;
+        });
+    </script>
+
+</body>
+</html>

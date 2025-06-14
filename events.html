@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Create an input box that listens for keypress events and displays the pressed key in a <p> tag. -->
+    <!-- <form action="" method="get">
+        <label for="">typing event</label>
+        <input type="text" name="textarea" id="input" placeholder="Enter the text here">
+        <p id="output">you typed..</p>
+    </form> -->
+
+
+
+
+
+    <!-- Write a script that increases the font size of a paragraph when the user hovers over it. -->
+      <!--<h2>Paragraph</h2>
+     <p id="written">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat omnis tempora error maiores officiis distinctio consequuntur beatae harum maxime doloribus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint aut debitis accusamus possimus aperiam. Tenetur consequatur itaque reiciendis repudiandae quaerat sint nam, suscipit recusandae earum voluptas quo tempora nostrum necessitatibus deserunt possimus incidunt accusantium laboriosam architecto soluta ducimus mollitia? Incidunt iure sed repudiandae perspiciatis enim at, numquam pariatur labore dolor quibusdam corrupti vel non harum cumque voluptatibus magni illo? Et doloribus fugiat maxime possimus illum, quisquam architecto quos voluptas delectus blanditiis sunt natus illo nemo adipisci aliquam quibusdam, ipsam eaque? Dolores natus sapiente, corrupti fuga nulla eius asperiores reiciendis perferendis dolorem nostrum ducimus accusantium, aliquid adipisci, eligendi velit enim necessitatibus?</p> -->
+
+
+     <!-- Prevent the default behavior of a form submission and instead display the submitted data inside a <div>. -->
+        <form action="" method="get" id="information">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" required><br>
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" required><br>
+            <label for="adress">Adress</label>
+            <input type="text" id="adress" name="adress" required>
+            <button type="submit">Submit</button>
+        </form>
+        
+
+        <div id="outputarea">
+            <p id="output">You submitted the following information:</p>
+            
+
+        </div>
+</body>
+<script>
+
+    // const inputarea=document.getElementById('input');
+    // const outputarea=document.getElementById('output');
+    // inputarea.addEventListener('keypress',function(e){
+    //     outputarea.textContent="you typed: " + e.key;
+    // },false)
+
+
+
+//    const tester= document.getElementById("written");
+//    tester.addEventListener('mouseover',function(e){
+//     tester.style.fontSize="30px";
+//     tester.style.backgroundColor="pink";
+//    })
+//    tester.addEventListener('mouseleave',function(){
+//     tester.style.fontSize="16px";
+//     tester.style.backgroundColor="white";
+//    },false)
+
+
+
+// const form=document.getElementById('information');
+// const data = document.getElementById('output');
+
+// form.addEventListener('submit', function(e){
+//     e.preventDefault(); //prevent from defaukt working
+// })
+// //gwt values
+// const first = document.getElementById('fname').value;
+//  const second = document.getElementById('lname').value;
+//  const social = document.getElementById('adress').value;
+// output.innerHTML = `First Name: ${first} <br> Last Name: ${second} <br> Address: ${social}`;
+
+
+  // Get form and output area
+  const form = document.getElementById('information');
+        const output = document.getElementById("output");
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent default form submission
+
+            // Get values **inside** the event listener
+            const first = document.getElementById('fname').value;
+            const second = document.getElementById('lname').value;
+            const social = document.getElementById('adress').value;
+
+            // Corrected string formatting
+            output.innerHTML = `First Name: ${first} <br> Last Name: ${second} <br> Address: ${social}`;
+        });
+
+
+
+
+
+</script>
+</html>

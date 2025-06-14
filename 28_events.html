@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141;">
+     <h2>Amazing Images</h2>
+     <ul id="images">
+        <li ><img width="200px" id="cric" src="FB_IMG_1704025806751.jpg" alt="photoshop" ></li>
+        <li><img width="200px" id="babar" src="FB_IMG_1705676205890.jpg" alt="babar" ></li>
+        <li><img width="200px" id="boy" src="FB_IMG_1715280367291.jpg" alt="asthetic" ></li>
+        <li><img width="200px"  id="vampire"  src="FB_IMG_1718376483796.jpg" alt="elijiah" ></li>
+        <li><img width="200px" id="movie" src="FB_IMG_1718956982181.jpg"  alt="film"></li>
+        <li><a style="color: aliceblue;"  href="http://google.com" id="google">Google</a></li>
+     </ul>
+</body>
+<script>
+// document.getElementById('vampire').onclick=function(){
+//     console.log("owl clicked");}
+    
+// document.querySelector('#images').addEventListener('click',function(){
+//     // alert("owl clicked");
+//     console.log('clicked inside images');
+    
+// },false)
+
+// document.querySelector('#vampire').addEventListener('click',function(){
+//     console.log('owl clicked');
+    
+// })
+
+document.querySelector('#images').addEventListener('click',function(e){
+    console.log(e.target.parentNode);
+    let removeit=e.target.parentNode;
+    removeit.remove();
+    
+},false)
+
+
+</script>
+</html>

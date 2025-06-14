@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141;">
+    <!-- assignment=photo or follwer card aana chaiye button dabane se -->
+</body>
+<script>
+    const requestURL=('https://api.github.com/users/hiteshchoudhary')
+   const xhr=  new XMLHttpRequest();  //create an object through new key word
+   xhr.open('GET', requestURL); // (method, string)
+   xhr.onreadystatechange=function(){
+    console.log(xhr.readyState);
+    if(xhr.readyState===4){
+        const data= JSON.parse(this.responseText);
+        // data comes in the frm of string.convert string to  JSON object
+        console.log(data);
+        
+        console.log(data.followers);
+        
+    }
+   }
+   
+//    console.log(xhr.readyState);
+   
+   
+   xhr.send(); //open have been called
+
+</script>
+</html>
